@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "product": "apple",
+    "category": "food",
+    "price": 150,
+    "date": "2025-05-13T15:50:43.893Z"
+  },
+  {
+    "id": 2,
+    "product": "watermelon",
+    "category": "food",
+    "price": 200,
+    "date": "2025-06-13T15:50:51.710Z"
+  },
+  {
+    "id": 3,
+    "product": "candy",
+    "category": "food",
+    "price": 250,
+    "date": "2025-05-13T15:51:03.893Z"
+  },
+  {
+    "id": 4,
+    "product": "laptop",
+    "category": "tech",
+    "price": 2500,
+    "date": "2025-05-13T15:51:21.053Z"
+  },
+  {
+    "id": 5,
+    "product": "telephone",
+    "category": "tech",
+    "price": 1250,
+    "date": "2025-09-13T15:51:27.757Z"
+  },
+  {
+    "id": 6,
+    "product": "xbox",
+    "category": "tech",
+    "price": 5000,
+    "date": "2025-10-13T15:51:37.316Z"
+  }
+]

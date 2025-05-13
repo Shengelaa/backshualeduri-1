@@ -1,0 +1,27 @@
+{
+  "name": "shualeduri-1",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "main.js",
+  "bin": {
+    "expenses-cli": "main.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shengelaa/backshualeduri-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shengelaa/backshualeduri-1/issues"
+  },
+  "homepage": "https://github.com/Shengelaa/backshualeduri-1#readme",
+  "description": "",
+  "dependencies": {
+    "commander": "^13.1.0"
+  }
+}
