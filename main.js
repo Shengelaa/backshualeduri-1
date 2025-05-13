@@ -65,8 +65,8 @@ program
       return;
     }
 
-    const deletedItem = movies.splice(index, 1);
-    await writeFile("expenses.json", JSON.stringify(movies));
+    const deletedItem = expenses.splice(index, 1);
+    await writeFile("expenses.json", JSON.stringify(expenses));
     console.log("deleted successfully", deletedItem);
   });
 
@@ -75,7 +75,7 @@ program
   .argument("<id>")
   .option("-p, --product <product>")
   .option("-c, --category <category>")
-  .option("-m, --money <price>")
+  .option("-m, --price <price>")
   .action(async (id, opts) => {
     const expenses = await readFile("expenses.json", true);
     const index = expenses.findIndex((el) => el.id === Number(id));
@@ -90,7 +90,7 @@ program
       ...expenses[index],
       ...opts,
     };
-    await writeFile("expenses.json", JSON.stringify(movies));
+    await writeFile("expenses.json", JSON.stringify(expenses));
     console.log("updated successfully", expenses[index]);
   });
 
@@ -99,6 +99,7 @@ program
   .option("-a, --ascending")
   .option("-d, --descending")
   .option("-c, --category <category>")
+  .option("-i, --id <id>")
   .action(async (opts) => {
     let expenses = await readFile("expenses.json", true);
 
@@ -110,10 +111,18 @@ program
 
     if (opts.ascending) {
       expenses.sort((a, b) => new Date(a.date) - new Date(b.date));
+      return;
     }
 
     if (opts.descending) {
       expenses.sort((a, b) => new Date(b.date) - new Date(a.date));
+      return;
+    }
+
+    if (opts.id) {
+      const foundId = expenses.find((el) => el.id === Number(opts.id));
+      console.log(foundId);
+      return;
     }
 
     console.log(expenses);
